@@ -1,3 +1,9 @@
-export function H5({ children }: { children: string }): JSX.Element {
-    return <h5 className=" text-lg font-bold leading-loose">{children}</h5>;
+import { Typhography } from "../../props/Typography";
+
+export function H5(props: Typhography): JSX.Element {
+    return (
+        <h5 className={`text-lg font-bold leading-loose ${props.className}`}>
+            {props.children}
+        </h5>
+    );
 }

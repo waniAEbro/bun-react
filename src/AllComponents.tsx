@@ -11,10 +11,16 @@ import { H6 } from "./components/typography/H6";
 import SecondaryBanner from "./components/image/SecondaryBanner";
 import { ArrowButton } from "./components/button/ArrowButton";
 import BubbleBanner from "./components/image/BubbleBanner";
+import Thumbnail from "./components/image/Thumbnail";
+import ProfileCard from "./components/card/ProfileCard";
+import ArticleCard from "./components/card/ArticleCard";
+import NumberCard from "./components/card/NumberCard";
+import Navbar from "./components/navbar";
 
 function AllComponents(): JSX.Element {
     return (
         <>
+            <Navbar />
             <div className="container mx-auto px-4 overflow-hidden">
                 <section className="my-4">
                     <H1>Buttons</H1>
@@ -82,6 +88,27 @@ function AllComponents(): JSX.Element {
                         image="secondary-banner-image.png"
                     />
                     <BubbleBanner />
+                    <Thumbnail />
+                </section>
+                <section className="my-4 flex flex-col gap-4">
+                    <H1>Card</H1>
+                    <div className=" grid lg:grid-cols-5 md:grid-cols-3 gap-4">
+                        <ProfileCard />
+                        <ProfileCard />
+                        <ProfileCard />
+                        <ProfileCard />
+                        <ProfileCard />
+                    </div>
+                    <div className=" grid lg:grid-cols-3 gap-4">
+                        <ArticleCard />
+                        <ArticleCard />
+                        <ArticleCard />
+                    </div>
+                    <div className=" grid lg:grid-cols-3 gap-4">
+                        <NumberCard />
+                        <NumberCard />
+                        <NumberCard />
+                    </div>
                 </section>
             </div>
         </>
